@@ -3,60 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Nurshan</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-            font-family: Arial, sans-serif;
-            text-align: center;
-            color: white;
-            flex-direction: column;
-        }
-        .message {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        button {
-            background: #ff758c;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #ff5c75;
-        }
-    </style>
+    <title>Frases Motivacionales</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="message" id="messageBox">
-        <h1>🌸 Para Nurshan 🌸</h1>
-        <p id="frase">Eres una persona increíble y especial. Que tu día esté lleno de alegría y sonrisas. 💖</p>
+    <div id="splash-screen" class="splash-screen">
+        <h1>💙 ¡Feliz Día del Amor y la Amistad! 💙</h1>
+        <p>🎉 Que este día esté lleno de amor y alegría. 🎊</p>
     </div>
-    <button onclick="nuevaFrase()">💌 Mensaje del día</button>
+    
+    <nav>
+        <ul>
+            <li><a href="#inicio">🏠 Inicio</a></li>
+            <li><a href="#frases">💬 Frases</a></li>
+            <li><a href="#contacto">📩 Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>💙 Mensajes para Ti 💙</h1>
+    </header>
+    
+    <main>
+        <section class="message-box">
+            <p id="frase">💖 Te extraño mucho, espero verte pronto. 💕</p>
+            <button onclick="nuevaFrase()">💌 Mensaje del día</button>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; tqm 💙</p>
+    </footer>
     
     <script>
         const frases = [
-            "Que tengas un hermoso día. ☀️",
-            "Eres alguien muy especial para mí. ✨",
-            "Te extraño mucho, espero verte pronto. 💕",
-            "Tu sonrisa ilumina mi día. 😊",
-            "Que hoy sea un día lleno de cosas bonitas para ti. 🌸"
+            "💖 Te extraño mucho, espero verte pronto. 💕",
+            "💙 Siempre estoy pensando en ti. 🌟",
+            "💫 No importa la distancia, siempre estamos conectados. 💖",
+            "🌊 Espero que hoy tengas un día maravilloso y lleno de alegría. 💙",
+            "💭 Cada momento contigo es especial, incluso en la distancia. 💕"
         ];
 
         function nuevaFrase() {
             const randomIndex = Math.floor(Math.random() * frases.length);
             document.getElementById("frase").textContent = frases[randomIndex];
         }
+
+        window.onload = function() {
+            setTimeout(() => {
+                document.getElementById("splash-screen").style.display = "none";
+            }, 3000);
+        };
     </script>
 </body>
 </html>
