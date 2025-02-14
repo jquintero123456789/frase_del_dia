@@ -34,7 +34,6 @@ body {
     padding: 15px;
     box-sizing: border-box;
     text-align: center;
-    word-wrap: break-word; /* Se asegura de que el texto se ajuste correctamente */
 }
 
 nav {
@@ -86,7 +85,6 @@ header {
     color: #444;
     width: 90%;
     max-width: 300px;
-    word-wrap: break-word;
 }
 
 button {
@@ -101,7 +99,6 @@ button {
     transition: background 0.3s;
     width: 90%;
     max-width: 180px;
-    word-wrap: break-word;
 }
 
 button:hover {
@@ -121,7 +118,7 @@ footer {
 
 @media (max-width: 480px) {
     .splash-screen {
-        font-size: 14px; /* Reducido para pantallas pequeñas */
+        font-size: 16px;
         padding: 12px;
     }
 
